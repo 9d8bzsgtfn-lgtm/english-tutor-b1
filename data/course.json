@@ -1,0 +1,163 @@
+{
+  "title": "English B1 - UNED",
+  "book": "Headway Intermediate",
+  "student": "Fran",
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Present Tenses",
+      "description": "Present Simple vs Present Continuous",
+      "completed": false,
+      "topics": ["Present Simple", "Present Continuous", "Stative verbs", "Time expressions"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 2,
+      "title": "Past Tenses",
+      "description": "Past Simple vs Past Continuous",
+      "completed": false,
+      "topics": ["Past Simple", "Past Continuous", "Time clauses", "When/While"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 3,
+      "title": "Present Perfect",
+      "description": "Present Perfect Simple and Continuous",
+      "completed": false,
+      "topics": ["Present Perfect Simple", "Present Perfect Continuous", "For/Since", "Just/Already/Yet"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "Future Forms",
+      "description": "Will, Going to, Present Continuous for future",
+      "completed": false,
+      "topics": ["Will", "Going to", "Present Continuous future", "Shall"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 5,
+      "title": "Comparatives & Superlatives",
+      "description": "Comparing things and people",
+      "completed": false,
+      "topics": ["Comparative adjectives", "Superlative adjectives", "As...as", "Less/More"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 6,
+      "title": "Modal Verbs",
+      "description": "Can, Could, Must, Should, May, Might",
+      "completed": false,
+      "topics": ["Ability", "Permission", "Obligation", "Possibility"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 7,
+      "title": "Conditionals",
+      "description": "Zero, First and Second Conditional",
+      "completed": false,
+      "topics": ["Zero Conditional", "First Conditional", "Second Conditional", "If/Unless"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 8,
+      "title": "Passive Voice",
+      "description": "Present and Past Passive",
+      "completed": false,
+      "topics": ["Present Passive", "Past Passive", "By + agent", "Passive questions"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 9,
+      "title": "Reported Speech",
+      "description": "Reporting what people said",
+      "completed": false,
+      "topics": ["Reported statements", "Reported questions", "Reporting verbs", "Time changes"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 10,
+      "title": "Relative Clauses",
+      "description": "Who, Which, That, Where",
+      "completed": false,
+      "topics": ["Defining clauses", "Non-defining clauses", "Relative pronouns", "Where/When"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 11,
+      "title": "Phrasal Verbs",
+      "description": "Common phrasal verbs",
+      "completed": false,
+      "topics": ["Separable phrasal verbs", "Inseparable phrasal verbs", "Common combinations"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    },
+    {
+      "id": 12,
+      "title": "Review & Exam Practice",
+      "description": "Full course revision",
+      "completed": false,
+      "topics": ["All tenses review", "Exam strategies", "Common mistakes", "Practice tests"],
+      "sections": {
+        "grammar": true,
+        "vocabulary": true,
+        "practice": true,
+        "test": true
+      }
+    }
+  ]
+}

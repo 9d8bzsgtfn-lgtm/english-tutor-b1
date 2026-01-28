@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Tutor B1 - UNED</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <h1>English Tutor B1</h1>
+        <p class="header-subtitle">UNED - Headway Intermediate</p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+
+        <!-- SIDEBAR: Navegación de lecciones -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Lecciones</h2>
+            <nav class="lessons-nav" id="lessonsNav">
+                <!-- Se genera dinámicamente desde course.json -->
+            </nav>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <h3>Progreso</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <p class="progress-text" id="progressText">0 / 12 completadas</p>
+            </div>
+        </aside>
+
+        <!-- CONTENT AREA -->
+        <main class="content-area">
+
+            <!-- Lesson Header -->
+            <section class="lesson-header" id="lessonHeader">
+                <h2 id="lessonTitle">Selecciona una lección</h2>
+                <p id="lessonDescription">Elige una lección del menú lateral para empezar.</p>
+            </section>
+
+            <!-- Section Tabs -->
+            <nav class="section-tabs" id="sectionTabs">
+                <button class="tab-btn active" data-section="grammar">Grammar</button>
+                <button class="tab-btn" data-section="vocabulary">Vocabulary</button>
+                <button class="tab-btn" data-section="practice">Practice</button>
+                <button class="tab-btn" data-section="test">Test</button>
+            </nav>
+
+            <!-- Section Content -->
+            <section class="section-content" id="sectionContent">
+                <div class="welcome-message">
+                    <p>Bienvenido al tutor de inglés B1.</p>
+                    <p>Selecciona una lección para ver su contenido.</p>
+                </div>
+            </section>
+
+            <!-- Podcast Player -->
+            <section class="podcast-section" id="podcastSection">
+                <h3 class="podcast-title">Podcast de la lección</h3>
+                <div class="podcast-player">
+                    <button class="podcast-btn" id="podcastPlayBtn" title="Reproducir">
+                        <span class="icon-play">▶</span>
+                    </button>
+                    <div class="podcast-progress">
+                        <div class="podcast-progress-bar" id="podcastProgressBar">
+                            <div class="podcast-progress-fill" id="podcastProgressFill"></div>
+                        </div>
+                        <div class="podcast-time">
+                            <span id="podcastCurrentTime">0:00</span>
+                            <span>/</span>
+                            <span id="podcastDuration">0:00</span>
+                        </div>
+                    </div>
+                    <input type="range" class="podcast-volume" id="podcastVolume" min="0" max="100" value="80" title="Volumen">
+                </div>
+                <audio id="podcastAudio"></audio>
+            </section>
+
+            <!-- Divider -->
+            <div class="content-divider"></div>
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+                <h3 class="chat-title">Chat con el tutor</h3>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message tutor-message">
+                        <span class="message-author">Tutor:</span>
+                        <p>Hello! I'm your English tutor. Ask me anything about the lesson or practice speaking with me.</p>
+                    </div>
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-area">
+                    <div class="voice-controls">
+                        <button class="voice-btn" id="voiceBtn" title="Hablar">
+                            <span class="voice-icon">🎤</span>
+                            <span class="voice-text" id="voiceText">HABLAR</span>
+                        </button>
+                        <div class="voice-status" id="voiceStatus">LISTO</div>
+                    </div>
+
+                    <div class="text-input-wrapper">
+                        <input type="text"
+                               class="chat-input"
+                               id="chatInput"
+                               placeholder="Escribe aquí si prefieres texto..."
+                               autocomplete="off">
+                        <button class="send-btn" id="sendBtn" title="Enviar">➤</button>
+                    </div>
+
+                    <label class="auto-voice-label">
+                        <input type="checkbox" id="autoVoice" checked>
+                        <span>Respuesta por voz</span>
+                    </label>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/speech.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
