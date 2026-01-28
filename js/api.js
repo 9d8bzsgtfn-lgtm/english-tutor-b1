@@ -4,8 +4,8 @@
  */
 
 const API = {
-    // URL del Worker de Cloudflare (CAMBIAR POR TU URL)
-    workerUrl: 'https://english-tutor.YOUR_SUBDOMAIN.workers.dev',
+    // URL del Worker de Cloudflare
+    workerUrl: 'https://english-tutor.francisco-lopez.workers.dev',
 
     // Historial de conversación
     conversationHistory: [],
