@@ -115,7 +115,7 @@ async function handleTTS(request, env, corsHeaders) {
         input: text,
         voice: voice, // alloy, echo, fable, onyx, nova, shimmer
         response_format: 'mp3',
-        speed: 0.95,
+        speed: 0.9,
       }),
     });
 

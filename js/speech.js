@@ -20,7 +20,7 @@ const SpeechManager = {
         continuous: false,      // No continuo, para controlar mejor
         interimResults: true,   // Resultados parciales
         useOpenAITTS: true,     // Usar OpenAI TTS en lugar de Web Speech
-        ttsVoice: 'nova',       // Voz de OpenAI: alloy, echo, fable, onyx, nova, shimmer
+        ttsVoice: 'onyx',       // Voz de OpenAI: alloy, echo, fable, onyx, nova, shimmer
         workerUrl: 'https://english-tutor.francisco-lopez.workers.dev'
     },
 
