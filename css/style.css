@@ -206,7 +206,7 @@ body {
     margin-left: 220px; /* Espacio para sidebar izquierdo fijo */
     margin-right: 360px; /* Espacio para sidebar derecho fijo */
     padding: var(--spacing-xl);
-    padding-top: calc(var(--spacing-xl) + 120px); /* Espacio para lesson header y tabs fijos */
+    padding-top: 140px; /* Espacio para lesson header (70px) + tabs (50px) + margen */
     overflow-y: auto;
 }
 
@@ -223,7 +223,7 @@ body {
     right: 360px;
     z-index: 140;
     background-color: var(--color-white);
-    padding: var(--spacing-md) var(--spacing-xl);
+    padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: 0;
     border-left: 6px solid var(--color-primary);
     border-bottom: 1px solid var(--color-gray);
@@ -233,13 +233,13 @@ body {
 
 .section-tabs {
     position: fixed;
-    top: 140px; /* Debajo del lesson header */
+    top: 125px; /* Debajo del lesson header (más compacto) */
     left: 220px;
     right: 360px;
     z-index: 139;
     display: flex;
     gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-xl);
+    padding: var(--spacing-xs) var(--spacing-xl);
     background-color: var(--color-background);
     border-bottom: 1px solid var(--color-gray);
     flex-wrap: wrap;
