@@ -194,27 +194,31 @@ body {
 .content-area {
     flex: 1;
     padding: var(--spacing-xl);
+    padding-right: 380px; /* Espacio para el chat fijo */
     overflow-y: auto;
-    max-width: calc(100% - 370px);
 }
 
 .content-main {
-    max-width: 800px;
+    max-width: 900px;
+    margin: 0 auto; /* Centrar el contenido */
 }
 
 /* ==== CHAT SIDEBAR (fixed right) ==== */
 .content-sidebar {
     position: fixed;
-    top: 100px;
+    top: 0;
     right: 0;
-    width: 350px;
-    height: calc(100vh - 100px);
+    width: 360px;
+    height: 100vh;
     background-color: var(--color-white);
     border-left: 2px solid var(--color-gray);
     display: flex;
     flex-direction: column;
     padding: var(--spacing-lg);
+    padding-top: 100px; /* Espacio para el header */
     overflow: hidden;
+    z-index: 100;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
 }
 
 .content-sidebar .chat-section {
@@ -225,17 +229,25 @@ body {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
+    background: transparent;
+}
+
+.content-sidebar .chat-title {
+    margin-bottom: var(--spacing-md);
 }
 
 .content-sidebar .chat-messages {
     flex: 1;
     height: auto;
     min-height: 0;
+    overflow-y: auto;
 }
 
 .content-sidebar .chat-input-area {
     flex-direction: column;
     gap: var(--spacing-sm);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-gray);
 }
 
 .content-sidebar .voice-controls {
@@ -873,7 +885,18 @@ body {
 /* ==== RESPONSIVE ==== */
 @media (max-width: 1200px) {
     .content-area {
+        padding-right: 380px; /* Mantener espacio para chat */
+    }
+
+    .content-main {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    /* En pantallas pequeñas, chat pasa a ser parte del flujo */
+    .content-area {
+        padding-right: var(--spacing-xl);
     }
 
     .content-sidebar {
@@ -883,8 +906,10 @@ body {
         width: 100%;
         height: auto;
         max-height: 400px;
+        padding-top: var(--spacing-lg);
         border-left: none;
         border-top: 2px solid var(--color-gray);
+        box-shadow: none;
     }
 }
 
