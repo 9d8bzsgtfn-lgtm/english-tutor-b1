@@ -1,5 +1,5 @@
 /**
- * SPEECH.JS - Web Speech API para STT y TTS
+ * SPEECH.JS - Web Speech API para STT + OpenAI TTS
  * English Tutor B1 - UNED
  */
 
@@ -9,6 +9,7 @@ const SpeechManager = {
     isSpeaking: false,
     recognition: null,
     synthesis: window.speechSynthesis,
+    audioElement: null,
 
     // Configuración
     config: {
@@ -17,7 +18,10 @@ const SpeechManager = {
         ttsRate: 0.9,           // Velocidad (0.1 - 10)
         ttsPitch: 1,            // Tono (0 - 2)
         continuous: false,      // No continuo, para controlar mejor
-        interimResults: true    // Resultados parciales
+        interimResults: true,   // Resultados parciales
+        useOpenAITTS: true,     // Usar OpenAI TTS en lugar de Web Speech
+        ttsVoice: 'nova',       // Voz de OpenAI: alloy, echo, fable, onyx, nova, shimmer
+        workerUrl: 'https://english-tutor.francisco-lopez.workers.dev'
     },
 
     // Callbacks
@@ -124,6 +128,79 @@ const SpeechManager = {
      * @param {object} options - Opciones adicionales
      */
     speak(text, options = {}) {
+        // Usar OpenAI TTS si está habilitado
+        if (this.config.useOpenAITTS) {
+            return this.speakWithOpenAI(text, options);
+        }
+
+        // Fallback a Web Speech API
+        return this.speakWithWebSpeech(text, options);
+    },
+
+    /**
+     * Sintetiza con OpenAI TTS (voz natural)
+     */
+    async speakWithOpenAI(text, options = {}) {
+        try {
+            this.isSpeaking = true;
+            if (this.onSpeakStart) this.onSpeakStart();
+
+            const response = await fetch(`${this.config.workerUrl}/tts`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    text: text,
+                    voice: options.voice || this.config.ttsVoice,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('TTS request failed');
+            }
+
+            const audioBlob = await response.blob();
+            const audioUrl = URL.createObjectURL(audioBlob);
+
+            // Crear o reutilizar elemento de audio
+            if (!this.audioElement) {
+                this.audioElement = new Audio();
+            }
+
+            this.audioElement.src = audioUrl;
+
+            this.audioElement.onended = () => {
+                this.isSpeaking = false;
+                URL.revokeObjectURL(audioUrl);
+                if (this.onSpeakEnd) this.onSpeakEnd();
+            };
+
+            this.audioElement.onerror = () => {
+                this.isSpeaking = false;
+                URL.revokeObjectURL(audioUrl);
+                console.error('Audio playback error');
+                if (this.onSpeakEnd) this.onSpeakEnd();
+            };
+
+            await this.audioElement.play();
+            return true;
+
+        } catch (error) {
+            console.error('OpenAI TTS error:', error);
+            this.isSpeaking = false;
+            if (this.onSpeakEnd) this.onSpeakEnd();
+
+            // Fallback a Web Speech API
+            console.log('Falling back to Web Speech API');
+            return this.speakWithWebSpeech(text, options);
+        }
+    },
+
+    /**
+     * Sintetiza con Web Speech API (fallback)
+     */
+    speakWithWebSpeech(text, options = {}) {
         if (!this.synthesis) {
             console.error('Speech Synthesis no soportado');
             return false;
