@@ -61,33 +61,32 @@
                     </div>
                 </section>
 
-                <!-- Podcast Player -->
-                <section class="podcast-section" id="podcastSection">
-                    <h3 class="podcast-title">Podcast de la lección</h3>
-                    <div class="podcast-player">
-                        <button class="podcast-btn" id="podcastPlayBtn" title="Reproducir">
-                            <span class="icon-play">▶</span>
-                        </button>
-                        <div class="podcast-progress">
-                            <div class="podcast-progress-bar" id="podcastProgressBar">
-                                <div class="podcast-progress-fill" id="podcastProgressFill"></div>
-                            </div>
-                            <div class="podcast-time">
-                                <span id="podcastCurrentTime">0:00</span>
-                                <span>/</span>
-                                <span id="podcastDuration">0:00</span>
-                            </div>
-                        </div>
-                        <input type="range" class="podcast-volume" id="podcastVolume" min="0" max="100" value="80" title="Volumen">
-                    </div>
-                    <audio id="podcastAudio"></audio>
-                </section>
             </div>
 
         </main>
 
-        <!-- CHAT SIDEBAR (fixed right) -->
+        <!-- RIGHT SIDEBAR (fixed) - Podcast + Chat -->
         <aside class="content-sidebar">
+            <!-- Podcast Player (compact) -->
+            <section class="podcast-sidebar" id="podcastSidebar">
+                <h3 class="podcast-title">Podcast</h3>
+                <div class="podcast-player-compact">
+                    <button class="podcast-btn" id="podcastPlayBtn" title="Reproducir">
+                        <span class="icon-play">▶</span>
+                    </button>
+                    <div class="podcast-progress">
+                        <div class="podcast-progress-bar" id="podcastProgressBar">
+                            <div class="podcast-progress-fill" id="podcastProgressFill"></div>
+                        </div>
+                        <div class="podcast-time">
+                            <span id="podcastCurrentTime">0:00</span> / <span id="podcastDuration">0:00</span>
+                        </div>
+                    </div>
+                    <input type="range" class="podcast-volume" id="podcastVolume" min="0" max="100" value="80" title="Volumen">
+                </div>
+                <audio id="podcastAudio"></audio>
+            </section>
+
             <!-- Chat Section -->
             <section class="chat-section">
                 <h3 class="chat-title">Chat con el tutor</h3>
