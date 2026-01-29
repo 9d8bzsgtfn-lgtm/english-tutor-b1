@@ -1,0 +1,160 @@
+<h3>Test: Future Forms</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre las formas de futuro.</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> "There's no milk." - "I ________ and buy some."</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) 'll go</div>
+            <div class="exercise-option" data-correct="false">b) 'm going to go</div>
+            <div class="exercise-option" data-correct="false">c) go</div>
+            <div class="exercise-option" data-correct="false">d) 'm going</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> I've bought the tickets. We ________ the concert next Friday.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will see</div>
+            <div class="exercise-option" data-correct="true">b) 're going to see</div>
+            <div class="exercise-option" data-correct="false">c) see</div>
+            <div class="exercise-option" data-correct="false">d) saw</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> The meeting ________ at 3pm tomorrow. (scheduled)</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will start</div>
+            <div class="exercise-option" data-correct="true">b) starts</div>
+            <div class="exercise-option" data-correct="false">c) is going to start</div>
+            <div class="exercise-option" data-correct="false">d) started</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> Look! That car ________ crash!</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will</div>
+            <div class="exercise-option" data-correct="true">b) is going to</div>
+            <div class="exercise-option" data-correct="false">c) crashes</div>
+            <div class="exercise-option" data-correct="false">d) is crashing</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> I think Spain ________ the World Cup.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) will win</div>
+            <div class="exercise-option" data-correct="false">b) is going to win</div>
+            <div class="exercise-option" data-correct="false">c) wins</div>
+            <div class="exercise-option" data-correct="false">d) is winning</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> I ________ my parents this Sunday. We've arranged it.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will visit</div>
+            <div class="exercise-option" data-correct="true">b) 'm visiting</div>
+            <div class="exercise-option" data-correct="false">c) visit</div>
+            <div class="exercise-option" data-correct="false">d) visited</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> Don't worry. I ________ anyone your secret.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) won't tell</div>
+            <div class="exercise-option" data-correct="false">b) 'm not going to tell</div>
+            <div class="exercise-option" data-correct="false">c) don't tell</div>
+            <div class="exercise-option" data-correct="false">d) 'm not telling</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> ________ we go to the cinema tonight?</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) Shall</div>
+            <div class="exercise-option" data-correct="false">b) Will</div>
+            <div class="exercise-option" data-correct="false">c) Do</div>
+            <div class="exercise-option" data-correct="false">d) Are</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> He's probably ________ late as usual.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) going to be</div>
+            <div class="exercise-option" data-correct="true">b) be</div>
+            <div class="exercise-option" data-correct="false">c) being</div>
+            <div class="exercise-option" data-correct="false">d) been</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> What ________ do after university? (your plans)</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will you</div>
+            <div class="exercise-option" data-correct="true">b) are you going to</div>
+            <div class="exercise-option" data-correct="false">c) do you</div>
+            <div class="exercise-option" data-correct="false">d) you will</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0, correct = 0;
+    exercises.forEach(exercise => {
+        exercise.querySelectorAll('.exercise-option').forEach(option => {
+            option.addEventListener('click', function() {
+                if (exercise.classList.contains('answered')) return;
+                exercise.classList.add('answered');
+                answered++;
+                if (this.dataset.correct === 'true') { this.classList.add('correct'); correct++; }
+                else { this.classList.add('incorrect'); exercise.querySelectorAll('.exercise-option').forEach(o => { if (o.dataset.correct === 'true') o.classList.add('correct'); }); }
+                if (answered === exercises.length) {
+                    const pct = (correct/exercises.length)*100;
+                    document.getElementById('testScore').textContent = `${correct}/${exercises.length} (${pct}%)`;
+                    document.getElementById('testScore').className = pct >= 90 ? 'test-score excellent' : pct >= 70 ? 'test-score good' : pct >= 50 ? 'test-score needs-work' : 'test-score poor';
+                    document.getElementById('testMessage').textContent = pct >= 70 ? 'Good job!' : 'Review the grammar.';
+                    document.getElementById('testResults').style.display = 'block';
+                }
+            });
+        });
+    });
+});
+</script>

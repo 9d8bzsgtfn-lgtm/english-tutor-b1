@@ -1,0 +1,160 @@
+<h3>Test: Comparatives & Superlatives</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre comparativos y superlativos.</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> She's ________ person in our office.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) the most young</div>
+            <div class="exercise-option" data-correct="true">b) the youngest</div>
+            <div class="exercise-option" data-correct="false">c) younger</div>
+            <div class="exercise-option" data-correct="false">d) youngest</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> Your idea is ________ mine.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) gooder than</div>
+            <div class="exercise-option" data-correct="true">b) better than</div>
+            <div class="exercise-option" data-correct="false">c) more good than</div>
+            <div class="exercise-option" data-correct="false">d) best than</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> This is ________ film I've ever seen.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) the baddest</div>
+            <div class="exercise-option" data-correct="true">b) the worst</div>
+            <div class="exercise-option" data-correct="false">c) worse</div>
+            <div class="exercise-option" data-correct="false">d) the most bad</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> He's not ________ his brother.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) as intelligent as</div>
+            <div class="exercise-option" data-correct="false">b) more intelligent as</div>
+            <div class="exercise-option" data-correct="false">c) intelligent than</div>
+            <div class="exercise-option" data-correct="false">d) so intelligent than</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> This hotel is much ________ the other one.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) more expensive than</div>
+            <div class="exercise-option" data-correct="false">b) expensiver than</div>
+            <div class="exercise-option" data-correct="false">c) most expensive than</div>
+            <div class="exercise-option" data-correct="false">d) expensive than</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> The Amazon is ________ river in the world.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) the longer</div>
+            <div class="exercise-option" data-correct="true">b) the longest</div>
+            <div class="exercise-option" data-correct="false">c) longest</div>
+            <div class="exercise-option" data-correct="false">d) longer</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> My flat is a bit ________ yours.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) smaller than</div>
+            <div class="exercise-option" data-correct="false">b) more small than</div>
+            <div class="exercise-option" data-correct="false">c) the smallest</div>
+            <div class="exercise-option" data-correct="false">d) smaller as</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> She's one of ________ actresses in Hollywood.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) the more famous</div>
+            <div class="exercise-option" data-correct="true">b) the most famous</div>
+            <div class="exercise-option" data-correct="false">c) the famouser</div>
+            <div class="exercise-option" data-correct="false">d) most famous</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> Living in the city is ________ living in the country.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) noisier as</div>
+            <div class="exercise-option" data-correct="true">b) noisier than</div>
+            <div class="exercise-option" data-correct="false">c) more noisy that</div>
+            <div class="exercise-option" data-correct="false">d) the noisiest</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> This exercise is ________ I thought.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) easier than</div>
+            <div class="exercise-option" data-correct="false">b) more easy than</div>
+            <div class="exercise-option" data-correct="false">c) easyer than</div>
+            <div class="exercise-option" data-correct="false">d) the easiest</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0, correct = 0;
+    exercises.forEach(ex => {
+        ex.querySelectorAll('.exercise-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                if (ex.classList.contains('answered')) return;
+                ex.classList.add('answered');
+                answered++;
+                if (this.dataset.correct === 'true') { this.classList.add('correct'); correct++; }
+                else { this.classList.add('incorrect'); ex.querySelectorAll('.exercise-option').forEach(o => { if (o.dataset.correct === 'true') o.classList.add('correct'); }); }
+                if (answered === exercises.length) {
+                    const pct = (correct/exercises.length)*100;
+                    document.getElementById('testScore').textContent = `${correct}/${exercises.length} (${pct}%)`;
+                    document.getElementById('testScore').className = pct >= 90 ? 'test-score excellent' : pct >= 70 ? 'test-score good' : pct >= 50 ? 'test-score needs-work' : 'test-score poor';
+                    document.getElementById('testMessage').textContent = pct >= 70 ? 'Good job!' : 'Review the grammar.';
+                    document.getElementById('testResults').style.display = 'block';
+                }
+            });
+        });
+    });
+});
+</script>

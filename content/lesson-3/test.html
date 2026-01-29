@@ -1,0 +1,173 @@
+<h3>Test: Present Perfect</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre Present Perfect.</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> I ________ never ________ to Asia.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) have / been</div>
+            <div class="exercise-option" data-correct="false">b) has / been</div>
+            <div class="exercise-option" data-correct="false">c) have / be</div>
+            <div class="exercise-option" data-correct="false">d) did / be</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> She's worked here ________ 2018.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) for</div>
+            <div class="exercise-option" data-correct="true">b) since</div>
+            <div class="exercise-option" data-correct="false">c) during</div>
+            <div class="exercise-option" data-correct="false">d) from</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> Have you eaten breakfast ________?</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) already</div>
+            <div class="exercise-option" data-correct="true">b) yet</div>
+            <div class="exercise-option" data-correct="false">c) just</div>
+            <div class="exercise-option" data-correct="false">d) ever</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> I ________ this film before. It's really good.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) have seen</div>
+            <div class="exercise-option" data-correct="false">b) saw</div>
+            <div class="exercise-option" data-correct="false">c) see</div>
+            <div class="exercise-option" data-correct="false">d) am seeing</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> They've known each other ________ a long time.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) for</div>
+            <div class="exercise-option" data-correct="false">b) since</div>
+            <div class="exercise-option" data-correct="false">c) from</div>
+            <div class="exercise-option" data-correct="false">d) during</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> He's ________ left. You just missed him.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) just</div>
+            <div class="exercise-option" data-correct="false">b) yet</div>
+            <div class="exercise-option" data-correct="false">c) already</div>
+            <div class="exercise-option" data-correct="false">d) ever</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> ________ you ever ________ a famous person?</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) Have / met</div>
+            <div class="exercise-option" data-correct="false">b) Did / meet</div>
+            <div class="exercise-option" data-correct="false">c) Have / meet</div>
+            <div class="exercise-option" data-correct="false">d) Do / met</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> I ________ to London in 2019.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) have been</div>
+            <div class="exercise-option" data-correct="true">b) went</div>
+            <div class="exercise-option" data-correct="false">c) have gone</div>
+            <div class="exercise-option" data-correct="false">d) go</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> She's ________ finished the project - she's so fast!</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) yet</div>
+            <div class="exercise-option" data-correct="true">b) already</div>
+            <div class="exercise-option" data-correct="false">c) just</div>
+            <div class="exercise-option" data-correct="false">d) ever</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> I've been learning English ________ five years.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) for</div>
+            <div class="exercise-option" data-correct="false">b) since</div>
+            <div class="exercise-option" data-correct="false">c) during</div>
+            <div class="exercise-option" data-correct="false">d) from</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0;
+    let correct = 0;
+    exercises.forEach(exercise => {
+        const options = exercise.querySelectorAll('.exercise-option');
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                if (exercise.classList.contains('answered')) return;
+                exercise.classList.add('answered');
+                answered++;
+                const isCorrect = this.dataset.correct === 'true';
+                if (isCorrect) { this.classList.add('correct'); correct++; }
+                else {
+                    this.classList.add('incorrect');
+                    options.forEach(opt => { if (opt.dataset.correct === 'true') opt.classList.add('correct'); });
+                }
+                if (answered === exercises.length) showResults();
+            });
+        });
+    });
+    function showResults() {
+        const resultsDiv = document.getElementById('testResults');
+        const scoreDiv = document.getElementById('testScore');
+        const messageP = document.getElementById('testMessage');
+        const percentage = (correct / exercises.length) * 100;
+        scoreDiv.textContent = `${correct}/${exercises.length} (${percentage}%)`;
+        if (percentage >= 90) { scoreDiv.className = 'test-score excellent'; messageP.textContent = 'Excellent!'; }
+        else if (percentage >= 70) { scoreDiv.className = 'test-score good'; messageP.textContent = 'Good job!'; }
+        else if (percentage >= 50) { scoreDiv.className = 'test-score needs-work'; messageP.textContent = 'Need more practice.'; }
+        else { scoreDiv.className = 'test-score poor'; messageP.textContent = 'Review the grammar section.'; }
+        resultsDiv.style.display = 'block';
+        resultsDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+});
+</script>
