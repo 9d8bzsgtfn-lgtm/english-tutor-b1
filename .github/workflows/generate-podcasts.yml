@@ -1,0 +1,102 @@
+name: Generate Weekly Vocabulary Podcasts
+
+on:
+  # Se ejecuta cada domingo a las 6:00 AM (hora de Madrid/España)
+  schedule:
+    - cron: '0 5 * * 0'  # 5:00 UTC = 6:00 CET / 7:00 CEST
+
+  # También permite ejecución manual desde GitHub
+  workflow_dispatch:
+    inputs:
+      day:
+        description: 'Día específico a generar (dejar vacío para todos)'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  generate-podcasts:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install edge-tts
+
+      - name: Generate podcasts
+        run: |
+          cd english-tutor
+          if [ -n "${{ github.event.inputs.day }}" ]; then
+            echo "Generando podcast para: ${{ github.event.inputs.day }}"
+            python scripts/generate_weekly_podcasts.py ${{ github.event.inputs.day }}
+          else
+            echo "Generando todos los podcasts de la semana..."
+            python scripts/generate_weekly_podcasts.py --all
+          fi
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          cd english-tutor
+          if [ -n "$(git status --porcelain podcasts/vocabulary/)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Hay nuevos podcasts generados"
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No hay cambios en los podcasts"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          cd english-tutor
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Obtener la fecha actual
+          WEEK_DATE=$(date +%Y-%m-%d)
+
+          git add podcasts/vocabulary/*.mp3
+          git commit -m "🎧 Podcasts de vocabulario generados automáticamente
+
+          Fecha: ${WEEK_DATE}
+
+          Podcasts actualizados:
+          - monday-vocabulary.mp3
+          - tuesday-vocabulary.mp3
+          - wednesday-vocabulary.mp3
+          - thursday-vocabulary.mp3
+          - friday-vocabulary.mp3
+          - saturday-vocabulary.mp3
+          - sunday-vocabulary.mp3
+
+          Generado automáticamente por GitHub Actions"
+
+          git push
+
+      - name: Summary
+        run: |
+          echo "## 🎧 Resumen de generación de podcasts" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Fecha:** $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Podcasts generados:" >> $GITHUB_STEP_SUMMARY
+          ls -la english-tutor/podcasts/vocabulary/*.mp3 2>/dev/null | while read line; do
+            filename=$(echo "$line" | awk '{print $NF}')
+            size=$(echo "$line" | awk '{print $5}')
+            echo "- \`$(basename $filename)\` ($(numfmt --to=iec-i --suffix=B $size))" >> $GITHUB_STEP_SUMMARY
+          done || echo "No se encontraron archivos" >> $GITHUB_STEP_SUMMARY
