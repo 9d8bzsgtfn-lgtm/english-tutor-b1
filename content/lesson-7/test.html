@@ -1,0 +1,160 @@
+<h3>Test: Conditionals (Zero, First & Second)</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre condicionales (Zero, First y Second).</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> If you ________ water to 100 degrees, it boils.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will heat</div>
+            <div class="exercise-option" data-correct="true">b) heat</div>
+            <div class="exercise-option" data-correct="false">c) heated</div>
+            <div class="exercise-option" data-correct="false">d) would heat</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> If I ________ you, I would apologise immediately.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) am</div>
+            <div class="exercise-option" data-correct="false">b) was</div>
+            <div class="exercise-option" data-correct="true">c) were</div>
+            <div class="exercise-option" data-correct="false">d) will be</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> We'll go to the park ________ it doesn't rain.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) if</div>
+            <div class="exercise-option" data-correct="false">b) unless</div>
+            <div class="exercise-option" data-correct="false">c) even</div>
+            <div class="exercise-option" data-correct="false">d) whether</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> If she ________ harder, she would get better results.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) works</div>
+            <div class="exercise-option" data-correct="false">b) will work</div>
+            <div class="exercise-option" data-correct="true">c) worked</div>
+            <div class="exercise-option" data-correct="false">d) would work</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> ________ you study, you won't pass the exam.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) If</div>
+            <div class="exercise-option" data-correct="true">b) Unless</div>
+            <div class="exercise-option" data-correct="false">c) When</div>
+            <div class="exercise-option" data-correct="false">d) Although</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> If I had more time, I ________ learn to play the guitar.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will</div>
+            <div class="exercise-option" data-correct="true">b) would</div>
+            <div class="exercise-option" data-correct="false">c) can</div>
+            <div class="exercise-option" data-correct="false">d) am going to</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> If you ________ that button, the machine starts.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) press</div>
+            <div class="exercise-option" data-correct="false">b) will press</div>
+            <div class="exercise-option" data-correct="false">c) pressed</div>
+            <div class="exercise-option" data-correct="false">d) would press</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> What ________ you do if you won the lottery?</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) will</div>
+            <div class="exercise-option" data-correct="false">b) do</div>
+            <div class="exercise-option" data-correct="true">c) would</div>
+            <div class="exercise-option" data-correct="false">d) are</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> If he ________ soon, we'll have to leave without him.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) doesn't arrive</div>
+            <div class="exercise-option" data-correct="false">b) won't arrive</div>
+            <div class="exercise-option" data-correct="false">c) didn't arrive</div>
+            <div class="exercise-option" data-correct="false">d) wouldn't arrive</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> You can borrow my car ________ you drive carefully.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) unless</div>
+            <div class="exercise-option" data-correct="true">b) as long as</div>
+            <div class="exercise-option" data-correct="false">c) in case</div>
+            <div class="exercise-option" data-correct="false">d) even if</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0, correct = 0;
+    exercises.forEach(ex => {
+        ex.querySelectorAll('.exercise-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                if (ex.classList.contains('answered')) return;
+                ex.classList.add('answered');
+                answered++;
+                if (this.dataset.correct === 'true') { this.classList.add('correct'); correct++; }
+                else { this.classList.add('incorrect'); ex.querySelectorAll('.exercise-option').forEach(o => { if (o.dataset.correct === 'true') o.classList.add('correct'); }); }
+                if (answered === exercises.length) {
+                    const pct = (correct/exercises.length)*100;
+                    document.getElementById('testScore').textContent = `${correct}/${exercises.length} (${pct}%)`;
+                    document.getElementById('testScore').className = pct >= 90 ? 'test-score excellent' : pct >= 70 ? 'test-score good' : pct >= 50 ? 'test-score needs-work' : 'test-score poor';
+                    document.getElementById('testMessage').textContent = pct >= 70 ? 'Good job!' : 'Review the grammar.';
+                    document.getElementById('testResults').style.display = 'block';
+                }
+            });
+        });
+    });
+});
+</script>

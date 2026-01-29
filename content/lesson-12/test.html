@@ -1,0 +1,160 @@
+<h3>Test: Linking Words & Connectors</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre conectores y linking words.</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> ________ I was feeling ill, I went to work.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) Despite</div>
+            <div class="exercise-option" data-correct="true">b) Although</div>
+            <div class="exercise-option" data-correct="false">c) Because</div>
+            <div class="exercise-option" data-correct="false">d) However</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> The concert was cancelled ________ the singer's illness.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) because</div>
+            <div class="exercise-option" data-correct="true">b) due to</div>
+            <div class="exercise-option" data-correct="false">c) so</div>
+            <div class="exercise-option" data-correct="false">d) although</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> He didn't have any experience. ________, he got the job.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) Therefore</div>
+            <div class="exercise-option" data-correct="true">b) However</div>
+            <div class="exercise-option" data-correct="false">c) Moreover</div>
+            <div class="exercise-option" data-correct="false">d) Because</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> ________ having a lot of money, she's not happy.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) Despite</div>
+            <div class="exercise-option" data-correct="false">b) Although</div>
+            <div class="exercise-option" data-correct="false">c) Because of</div>
+            <div class="exercise-option" data-correct="false">d) So</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> The hotel was fantastic. ________, the staff were very friendly.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) However</div>
+            <div class="exercise-option" data-correct="false">b) But</div>
+            <div class="exercise-option" data-correct="true">c) Moreover</div>
+            <div class="exercise-option" data-correct="false">d) Although</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> I love sports ________ tennis and swimming.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) for example</div>
+            <div class="exercise-option" data-correct="true">b) such as</div>
+            <div class="exercise-option" data-correct="false">c) moreover</div>
+            <div class="exercise-option" data-correct="false">d) however</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> ________ the heavy traffic, we arrived on time.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) Because of</div>
+            <div class="exercise-option" data-correct="false">b) Although</div>
+            <div class="exercise-option" data-correct="true">c) In spite of</div>
+            <div class="exercise-option" data-correct="false">d) Therefore</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> She was very tired, ________ she continued working.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) so</div>
+            <div class="exercise-option" data-correct="true">b) but</div>
+            <div class="exercise-option" data-correct="false">c) because</div>
+            <div class="exercise-option" data-correct="false">d) therefore</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> I stayed at home ________ I wasn't feeling well.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) so</div>
+            <div class="exercise-option" data-correct="false">b) although</div>
+            <div class="exercise-option" data-correct="true">c) because</div>
+            <div class="exercise-option" data-correct="false">d) however</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> ________, I'd like to thank everyone. ________, let me introduce our guest speaker.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) First / Secondly</div>
+            <div class="exercise-option" data-correct="false">b) However / Therefore</div>
+            <div class="exercise-option" data-correct="false">c) Although / But</div>
+            <div class="exercise-option" data-correct="false">d) Because / So</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0, correct = 0;
+    exercises.forEach(ex => {
+        ex.querySelectorAll('.exercise-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                if (ex.classList.contains('answered')) return;
+                ex.classList.add('answered');
+                answered++;
+                if (this.dataset.correct === 'true') { this.classList.add('correct'); correct++; }
+                else { this.classList.add('incorrect'); ex.querySelectorAll('.exercise-option').forEach(o => { if (o.dataset.correct === 'true') o.classList.add('correct'); }); }
+                if (answered === exercises.length) {
+                    const pct = (correct/exercises.length)*100;
+                    document.getElementById('testScore').textContent = `${correct}/${exercises.length} (${pct}%)`;
+                    document.getElementById('testScore').className = pct >= 90 ? 'test-score excellent' : pct >= 70 ? 'test-score good' : pct >= 50 ? 'test-score needs-work' : 'test-score poor';
+                    document.getElementById('testMessage').textContent = pct >= 70 ? 'Good job!' : 'Review the grammar.';
+                    document.getElementById('testResults').style.display = 'block';
+                }
+            });
+        });
+    });
+});
+</script>

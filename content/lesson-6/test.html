@@ -1,0 +1,160 @@
+<h3>Test: Modal Verbs</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre verbos modales.</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> You ________ drive without a licence. It's illegal.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) don't have to</div>
+            <div class="exercise-option" data-correct="true">b) mustn't</div>
+            <div class="exercise-option" data-correct="false">c) shouldn't</div>
+            <div class="exercise-option" data-correct="false">d) might not</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> I ________ swim when I was four years old.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) can</div>
+            <div class="exercise-option" data-correct="true">b) could</div>
+            <div class="exercise-option" data-correct="false">c) must</div>
+            <div class="exercise-option" data-correct="false">d) may</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> You look ill. You ________ see a doctor.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) might</div>
+            <div class="exercise-option" data-correct="true">b) should</div>
+            <div class="exercise-option" data-correct="false">c) mustn't</div>
+            <div class="exercise-option" data-correct="false">d) can</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> ________ you pass me the salt, please?</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) Must</div>
+            <div class="exercise-option" data-correct="true">b) Could</div>
+            <div class="exercise-option" data-correct="false">c) Should</div>
+            <div class="exercise-option" data-correct="false">d) Might</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> It's a public holiday tomorrow. I ________ go to work.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) don't have to</div>
+            <div class="exercise-option" data-correct="false">b) mustn't</div>
+            <div class="exercise-option" data-correct="false">c) can't</div>
+            <div class="exercise-option" data-correct="false">d) shouldn't</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> Where's Peter? He ________ be in the office - I just saw his car outside.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) can</div>
+            <div class="exercise-option" data-correct="true">b) must</div>
+            <div class="exercise-option" data-correct="false">c) should</div>
+            <div class="exercise-option" data-correct="false">d) might</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> Take a jacket. It ________ get cold this evening.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) must</div>
+            <div class="exercise-option" data-correct="true">b) might</div>
+            <div class="exercise-option" data-correct="false">c) should</div>
+            <div class="exercise-option" data-correct="false">d) has to</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> Students ________ to wear uniform at this school. It's the rule.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) must</div>
+            <div class="exercise-option" data-correct="true">b) have</div>
+            <div class="exercise-option" data-correct="false">c) should</div>
+            <div class="exercise-option" data-correct="false">d) can</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> You ________ tell anyone about this. It's a secret!</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) mustn't</div>
+            <div class="exercise-option" data-correct="false">b) don't have to</div>
+            <div class="exercise-option" data-correct="false">c) can't to</div>
+            <div class="exercise-option" data-correct="false">d) shouldn't to</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> ________ I use your phone? I need to make an urgent call.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) Must</div>
+            <div class="exercise-option" data-correct="false">b) Should</div>
+            <div class="exercise-option" data-correct="true">c) May</div>
+            <div class="exercise-option" data-correct="false">d) Might</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0, correct = 0;
+    exercises.forEach(ex => {
+        ex.querySelectorAll('.exercise-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                if (ex.classList.contains('answered')) return;
+                ex.classList.add('answered');
+                answered++;
+                if (this.dataset.correct === 'true') { this.classList.add('correct'); correct++; }
+                else { this.classList.add('incorrect'); ex.querySelectorAll('.exercise-option').forEach(o => { if (o.dataset.correct === 'true') o.classList.add('correct'); }); }
+                if (answered === exercises.length) {
+                    const pct = (correct/exercises.length)*100;
+                    document.getElementById('testScore').textContent = `${correct}/${exercises.length} (${pct}%)`;
+                    document.getElementById('testScore').className = pct >= 90 ? 'test-score excellent' : pct >= 70 ? 'test-score good' : pct >= 50 ? 'test-score needs-work' : 'test-score poor';
+                    document.getElementById('testMessage').textContent = pct >= 70 ? 'Good job!' : 'Review the grammar.';
+                    document.getElementById('testResults').style.display = 'block';
+                }
+            });
+        });
+    });
+});
+</script>

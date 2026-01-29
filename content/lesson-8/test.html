@@ -1,0 +1,160 @@
+<h3>Test: Passive Voice</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre la voz pasiva.</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> The Mona Lisa ________ by Leonardo da Vinci.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) painted</div>
+            <div class="exercise-option" data-correct="true">b) was painted</div>
+            <div class="exercise-option" data-correct="false">c) is painted</div>
+            <div class="exercise-option" data-correct="false">d) has painted</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> A new hospital ________ in the city centre next year.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) is built</div>
+            <div class="exercise-option" data-correct="false">b) was built</div>
+            <div class="exercise-option" data-correct="true">c) will be built</div>
+            <div class="exercise-option" data-correct="false">d) has been built</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> Coffee ________ in Brazil and Colombia.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) is grown</div>
+            <div class="exercise-option" data-correct="false">b) are grown</div>
+            <div class="exercise-option" data-correct="false">c) was grown</div>
+            <div class="exercise-option" data-correct="false">d) grows</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> The meeting ________ because the director is ill.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) cancelled</div>
+            <div class="exercise-option" data-correct="false">b) was cancelled</div>
+            <div class="exercise-option" data-correct="true">c) has been cancelled</div>
+            <div class="exercise-option" data-correct="false">d) is cancelling</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> The suspect ________ by the police yesterday.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) is arrested</div>
+            <div class="exercise-option" data-correct="true">b) was arrested</div>
+            <div class="exercise-option" data-correct="false">c) has been arrested</div>
+            <div class="exercise-option" data-correct="false">d) arrested</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> This report ________ by tomorrow.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) must finish</div>
+            <div class="exercise-option" data-correct="true">b) must be finished</div>
+            <div class="exercise-option" data-correct="false">c) must finished</div>
+            <div class="exercise-option" data-correct="false">d) must be finish</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> The road ________ at the moment, so we need to take another route.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) is repaired</div>
+            <div class="exercise-option" data-correct="true">b) is being repaired</div>
+            <div class="exercise-option" data-correct="false">c) was repaired</div>
+            <div class="exercise-option" data-correct="false">d) repaired</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> It ________ that the company will close next month.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) says</div>
+            <div class="exercise-option" data-correct="true">b) is said</div>
+            <div class="exercise-option" data-correct="false">c) said</div>
+            <div class="exercise-option" data-correct="false">d) has said</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> Spanish ________ in Spain and most of Latin America.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) speaks</div>
+            <div class="exercise-option" data-correct="true">b) is spoken</div>
+            <div class="exercise-option" data-correct="false">c) spoken</div>
+            <div class="exercise-option" data-correct="false">d) was spoken</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> The letter ________ yet. I'm still writing it.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) hasn't been sent</div>
+            <div class="exercise-option" data-correct="false">b) wasn't sent</div>
+            <div class="exercise-option" data-correct="false">c) isn't sent</div>
+            <div class="exercise-option" data-correct="false">d) didn't send</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0, correct = 0;
+    exercises.forEach(ex => {
+        ex.querySelectorAll('.exercise-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                if (ex.classList.contains('answered')) return;
+                ex.classList.add('answered');
+                answered++;
+                if (this.dataset.correct === 'true') { this.classList.add('correct'); correct++; }
+                else { this.classList.add('incorrect'); ex.querySelectorAll('.exercise-option').forEach(o => { if (o.dataset.correct === 'true') o.classList.add('correct'); }); }
+                if (answered === exercises.length) {
+                    const pct = (correct/exercises.length)*100;
+                    document.getElementById('testScore').textContent = `${correct}/${exercises.length} (${pct}%)`;
+                    document.getElementById('testScore').className = pct >= 90 ? 'test-score excellent' : pct >= 70 ? 'test-score good' : pct >= 50 ? 'test-score needs-work' : 'test-score poor';
+                    document.getElementById('testMessage').textContent = pct >= 70 ? 'Good job!' : 'Review the grammar.';
+                    document.getElementById('testResults').style.display = 'block';
+                }
+            });
+        });
+    });
+});
+</script>

@@ -1,0 +1,160 @@
+<h3>Test: Phrasal Verbs</h3>
+
+<div class="box-importante">
+    <span class="tag tag-importante">TEST - FORMATO EXAMEN B1</span>
+    <p>10 preguntas sobre phrasal verbs.</p>
+</div>
+
+<div id="testContainer">
+    <div class="exercise" data-test="1">
+        <div class="exercise-question">
+            <p><strong>1.</strong> I usually ________ at 7am during the week.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) get on</div>
+            <div class="exercise-option" data-correct="true">b) get up</div>
+            <div class="exercise-option" data-correct="false">c) get off</div>
+            <div class="exercise-option" data-correct="false">d) get over</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="2">
+        <div class="exercise-question">
+            <p><strong>2.</strong> Can you turn ________ ? I can't hear the TV.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) it off</div>
+            <div class="exercise-option" data-correct="false">b) up it</div>
+            <div class="exercise-option" data-correct="true">c) it up</div>
+            <div class="exercise-option" data-correct="false">d) it on</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="3">
+        <div class="exercise-question">
+            <p><strong>3.</strong> She ________ her grandmother - they look exactly alike.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) looks after</div>
+            <div class="exercise-option" data-correct="true">b) takes after</div>
+            <div class="exercise-option" data-correct="false">c) looks for</div>
+            <div class="exercise-option" data-correct="false">d) takes on</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="4">
+        <div class="exercise-question">
+            <p><strong>4.</strong> I'm really looking forward ________ you again.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) to see</div>
+            <div class="exercise-option" data-correct="true">b) to seeing</div>
+            <div class="exercise-option" data-correct="false">c) seeing</div>
+            <div class="exercise-option" data-correct="false">d) for seeing</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="5">
+        <div class="exercise-question">
+            <p><strong>5.</strong> They offered him the job but he ________ it.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) turned on</div>
+            <div class="exercise-option" data-correct="true">b) turned down</div>
+            <div class="exercise-option" data-correct="false">c) turned off</div>
+            <div class="exercise-option" data-correct="false">d) turned up</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="6">
+        <div class="exercise-question">
+            <p><strong>6.</strong> We've ________ of sugar. Can you buy some more?</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) run away</div>
+            <div class="exercise-option" data-correct="true">b) run out</div>
+            <div class="exercise-option" data-correct="false">c) run into</div>
+            <div class="exercise-option" data-correct="false">d) run over</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="7">
+        <div class="exercise-question">
+            <p><strong>7.</strong> Please ________ your shoes before entering the house.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) take off</div>
+            <div class="exercise-option" data-correct="false">b) take on</div>
+            <div class="exercise-option" data-correct="false">c) put on</div>
+            <div class="exercise-option" data-correct="false">d) take up</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="8">
+        <div class="exercise-question">
+            <p><strong>8.</strong> I don't ________ with my new colleagues very well.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) get off</div>
+            <div class="exercise-option" data-correct="true">b) get on</div>
+            <div class="exercise-option" data-correct="false">c) get up</div>
+            <div class="exercise-option" data-correct="false">d) get over</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="9">
+        <div class="exercise-question">
+            <p><strong>9.</strong> I need to ________ what time the meeting starts.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="true">a) find out</div>
+            <div class="exercise-option" data-correct="false">b) look after</div>
+            <div class="exercise-option" data-correct="false">c) take off</div>
+            <div class="exercise-option" data-correct="false">d) give up</div>
+        </div>
+    </div>
+
+    <div class="exercise" data-test="10">
+        <div class="exercise-question">
+            <p><strong>10.</strong> He's decided to ________ a new hobby - photography.</p>
+        </div>
+        <div class="exercise-options">
+            <div class="exercise-option" data-correct="false">a) take off</div>
+            <div class="exercise-option" data-correct="false">b) take after</div>
+            <div class="exercise-option" data-correct="true">c) take up</div>
+            <div class="exercise-option" data-correct="false">d) take on</div>
+        </div>
+    </div>
+</div>
+
+<div class="test-results" id="testResults" style="display: none;">
+    <h4>Tu resultado</h4>
+    <div class="test-score" id="testScore">0/10</div>
+    <p id="testMessage"></p>
+    <button class="tab-btn" onclick="location.reload()" style="margin-top: 15px;">Repetir Test</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const exercises = document.querySelectorAll('[data-test]');
+    let answered = 0, correct = 0;
+    exercises.forEach(ex => {
+        ex.querySelectorAll('.exercise-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                if (ex.classList.contains('answered')) return;
+                ex.classList.add('answered');
+                answered++;
+                if (this.dataset.correct === 'true') { this.classList.add('correct'); correct++; }
+                else { this.classList.add('incorrect'); ex.querySelectorAll('.exercise-option').forEach(o => { if (o.dataset.correct === 'true') o.classList.add('correct'); }); }
+                if (answered === exercises.length) {
+                    const pct = (correct/exercises.length)*100;
+                    document.getElementById('testScore').textContent = `${correct}/${exercises.length} (${pct}%)`;
+                    document.getElementById('testScore').className = pct >= 90 ? 'test-score excellent' : pct >= 70 ? 'test-score good' : pct >= 50 ? 'test-score needs-work' : 'test-score poor';
+                    document.getElementById('testMessage').textContent = pct >= 70 ? 'Good job!' : 'Review the grammar.';
+                    document.getElementById('testResults').style.display = 'block';
+                }
+            });
+        });
+    });
+});
+</script>
