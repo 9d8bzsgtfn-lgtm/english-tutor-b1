@@ -39,7 +39,6 @@ jobs:
 
       - name: Generate podcasts
         run: |
-          cd english-tutor
           if [ -n "${{ github.event.inputs.day }}" ]; then
             echo "Generando podcast para: ${{ github.event.inputs.day }}"
             python scripts/generate_weekly_podcasts.py ${{ github.event.inputs.day }}
@@ -51,7 +50,6 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          cd english-tutor
           if [ -n "$(git status --porcelain podcasts/vocabulary/)" ]; then
             echo "changes=true" >> $GITHUB_OUTPUT
             echo "Hay nuevos podcasts generados"
@@ -63,7 +61,6 @@ jobs:
       - name: Commit and push changes
         if: steps.check_changes.outputs.changes == 'true'
         run: |
-          cd english-tutor
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
@@ -95,7 +92,7 @@ jobs:
           echo "**Fecha:** $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Podcasts generados:" >> $GITHUB_STEP_SUMMARY
-          ls -la english-tutor/podcasts/vocabulary/*.mp3 2>/dev/null | while read line; do
+          ls -la podcasts/vocabulary/*.mp3 2>/dev/null | while read line; do
             filename=$(echo "$line" | awk '{print $NF}')
             size=$(echo "$line" | awk '{print $5}')
             echo "- \`$(basename $filename)\` ($(numfmt --to=iec-i --suffix=B $size))" >> $GITHUB_STEP_SUMMARY
