@@ -195,7 +195,62 @@ body {
     flex: 1;
     padding: var(--spacing-xl);
     overflow-y: auto;
-    max-width: 900px;
+    max-width: calc(100% - 370px);
+}
+
+.content-main {
+    max-width: 800px;
+}
+
+/* ==== CHAT SIDEBAR (fixed right) ==== */
+.content-sidebar {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 350px;
+    height: calc(100vh - 100px);
+    background-color: var(--color-white);
+    border-left: 2px solid var(--color-gray);
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    overflow: hidden;
+}
+
+.content-sidebar .chat-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.content-sidebar .chat-messages {
+    flex: 1;
+    height: auto;
+    min-height: 0;
+}
+
+.content-sidebar .chat-input-area {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.content-sidebar .voice-controls {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content-sidebar .voice-btn {
+    width: 60px;
+    height: 60px;
+}
+
+.content-sidebar .text-input-wrapper {
+    width: 100%;
 }
 
 /* ==== LESSON HEADER ==== */
@@ -816,6 +871,23 @@ body {
 .test-score.poor { color: var(--color-error); }
 
 /* ==== RESPONSIVE ==== */
+@media (max-width: 1200px) {
+    .content-area {
+        max-width: 100%;
+    }
+
+    .content-sidebar {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        border-left: none;
+        border-top: 2px solid var(--color-gray);
+    }
+}
+
 @media (max-width: 900px) {
     .main-container {
         flex-direction: column;

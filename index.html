@@ -37,53 +37,57 @@
         <!-- CONTENT AREA -->
         <main class="content-area">
 
-            <!-- Lesson Header -->
-            <section class="lesson-header" id="lessonHeader">
-                <h2 id="lessonTitle">Selecciona una lección</h2>
-                <p id="lessonDescription">Elige una lección del menú lateral para empezar.</p>
-            </section>
+            <!-- MAIN CONTENT (left) -->
+            <div class="content-main">
+                <!-- Lesson Header -->
+                <section class="lesson-header" id="lessonHeader">
+                    <h2 id="lessonTitle">Selecciona una lección</h2>
+                    <p id="lessonDescription">Elige una lección del menú lateral para empezar.</p>
+                </section>
 
-            <!-- Section Tabs -->
-            <nav class="section-tabs" id="sectionTabs">
-                <button class="tab-btn active" data-section="grammar">Grammar</button>
-                <button class="tab-btn" data-section="vocabulary">Vocabulary</button>
-                <button class="tab-btn" data-section="practice">Practice</button>
-                <button class="tab-btn" data-section="test">Test</button>
-            </nav>
+                <!-- Section Tabs -->
+                <nav class="section-tabs" id="sectionTabs">
+                    <button class="tab-btn active" data-section="grammar">Grammar</button>
+                    <button class="tab-btn" data-section="vocabulary">Vocabulary</button>
+                    <button class="tab-btn" data-section="practice">Practice</button>
+                    <button class="tab-btn" data-section="test">Test</button>
+                </nav>
 
-            <!-- Section Content -->
-            <section class="section-content" id="sectionContent">
-                <div class="welcome-message">
-                    <p>Bienvenido al tutor de inglés B1.</p>
-                    <p>Selecciona una lección para ver su contenido.</p>
-                </div>
-            </section>
-
-            <!-- Podcast Player -->
-            <section class="podcast-section" id="podcastSection">
-                <h3 class="podcast-title">Podcast de la lección</h3>
-                <div class="podcast-player">
-                    <button class="podcast-btn" id="podcastPlayBtn" title="Reproducir">
-                        <span class="icon-play">▶</span>
-                    </button>
-                    <div class="podcast-progress">
-                        <div class="podcast-progress-bar" id="podcastProgressBar">
-                            <div class="podcast-progress-fill" id="podcastProgressFill"></div>
-                        </div>
-                        <div class="podcast-time">
-                            <span id="podcastCurrentTime">0:00</span>
-                            <span>/</span>
-                            <span id="podcastDuration">0:00</span>
-                        </div>
+                <!-- Section Content -->
+                <section class="section-content" id="sectionContent">
+                    <div class="welcome-message">
+                        <p>Bienvenido al tutor de inglés B1.</p>
+                        <p>Selecciona una lección para ver su contenido.</p>
                     </div>
-                    <input type="range" class="podcast-volume" id="podcastVolume" min="0" max="100" value="80" title="Volumen">
-                </div>
-                <audio id="podcastAudio"></audio>
-            </section>
+                </section>
 
-            <!-- Divider -->
-            <div class="content-divider"></div>
+                <!-- Podcast Player -->
+                <section class="podcast-section" id="podcastSection">
+                    <h3 class="podcast-title">Podcast de la lección</h3>
+                    <div class="podcast-player">
+                        <button class="podcast-btn" id="podcastPlayBtn" title="Reproducir">
+                            <span class="icon-play">▶</span>
+                        </button>
+                        <div class="podcast-progress">
+                            <div class="podcast-progress-bar" id="podcastProgressBar">
+                                <div class="podcast-progress-fill" id="podcastProgressFill"></div>
+                            </div>
+                            <div class="podcast-time">
+                                <span id="podcastCurrentTime">0:00</span>
+                                <span>/</span>
+                                <span id="podcastDuration">0:00</span>
+                            </div>
+                        </div>
+                        <input type="range" class="podcast-volume" id="podcastVolume" min="0" max="100" value="80" title="Volumen">
+                    </div>
+                    <audio id="podcastAudio"></audio>
+                </section>
+            </div>
 
+        </main>
+
+        <!-- CHAT SIDEBAR (fixed right) -->
+        <aside class="content-sidebar">
             <!-- Chat Section -->
             <section class="chat-section">
                 <h3 class="chat-title">Chat con el tutor</h3>
@@ -110,7 +114,7 @@
                         <input type="text"
                                class="chat-input"
                                id="chatInput"
-                               placeholder="Escribe aquí si prefieres texto..."
+                               placeholder="Escribe aquí..."
                                autocomplete="off">
                         <button class="send-btn" id="sendBtn" title="Enviar">➤</button>
                     </div>
@@ -121,8 +125,7 @@
                     </label>
                 </div>
             </section>
-
-        </main>
+        </aside>
     </div>
 
     <!-- Scripts -->
